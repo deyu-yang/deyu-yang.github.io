@@ -22,10 +22,13 @@
 
 ## 当前进度
 
-- [ ] 第一阶段（进行中）：用 al-folio 默认内容让网站在 deyu-yang.github.io 上线
+- [x] 第一阶段（2026-09-24 完成）：用 al-folio 默认内容让网站在 deyu-yang.github.io 上线
   - [x] 安装 Git，设置署名；用模板创建仓库；克隆到本地
   - [x] 修改 `_config.yml`：`url: https://deyu-yang.github.io`，`baseurl` 留空
-  - [ ] 推送后由 GitHub Actions 发布到 `gh-pages` 分支，开启 GitHub Pages，确认网站可以访问
+  - [x] 推送后由 GitHub Actions 发布到 `gh-pages` 分支，开启 GitHub Pages（Source：`gh-pages` / root），确认网站可以访问
+- 待处理的小问题：
+  - "Lighthouse Badger" 工作流运行失败（它只负责生成网站性能评分徽章，不影响发布），以后查明原因或关闭它
+  - `_pages/about.md` 的示例文字里写死了 `/al-folio/publications/` 链接，填写个人简介时会一并替换
 - [ ] 以后的阶段（计划中）：本地预览（用 Docker）、个人信息与头像、论文列表（publications）、简历（CV）、新闻（news）等
 
 ## 关键技术要点
@@ -33,6 +36,7 @@
 - **Git 署名**：`deyu-yang` / `180747901+deyu-yang@users.noreply.github.com`（GitHub 隐私邮箱，不要换成个人邮箱）。
 - **发布流程**：推送（push）到 `main` 分支后，`.github/workflows/deploy.yml`（"Deploy site"）会生成网站并写入 `gh-pages` 分支，GitHub Pages 再从 `gh-pages` 分支发布。整个过程大约需要 3 到 5 分钟。
 - **baseurl 必须留空**：`AGENTS.md` 里说 "baseurl 是 `/al-folio`、清空会出错"，这条只适用于模板仓库本身，**不适用于本网站**。本网站位于域名根目录。
+- **推送凭据**：Claude 的命令窗口无法弹出登录框。首次推送由用户在自己的 PowerShell 中完成登录，凭据保存在 Windows 凭据管理器中。如果凭据失效，请用户自己在 PowerShell 中运行 `git push` 重新登录。
 - **推送前先 `git pull`**：模板里的一些工作流（例如 `update-tocs.yml`）可能会自动往 `main` 提交。如果本地没有同步，推送会被拒绝。
 - **Prettier 等检查失败不影响发布**：Actions 中 Prettier、链接检查等出现红色 ❌ 时，网站仍然可以正常发布，可以之后再处理。
 - **Windows 上找不到 git 时**：Claude 的 PowerShell 窗口不会自动更新 PATH，每条命令前先运行：
