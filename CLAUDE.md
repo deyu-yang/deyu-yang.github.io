@@ -1,48 +1,51 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+这个文件是写给 Claude Code 的项目说明。每次在本文件夹中启动 Claude Code 时会被自动读取。
 
-@AGENTS.md
+## 项目背景
 
-`AGENTS.md` (imported above) is the **authoritative** agent entry point: change routing, the stop sign for gem-owned paths, the three silent failure modes, and the validated command set. Keep it short and ecosystem-neutral. Cross-repo architecture — the wrapper/tag/gem delegation table, feature gating, the v1 config contract, local overrides — lives in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md); area-to-gem ownership lives in [`docs/BOUNDARIES.md`](docs/BOUNDARIES.md).
+- 用户：香港科技大学（HKUST）机械工程专业博士新生，非计算机专业背景。有基础电脑知识，但不熟悉 Git、命令行（command line）和网页开发（web development）。
+- 项目：基于 [al-folio](https://github.com/alshedivat/al-folio) 模板的个人学术主页。
+  - GitHub 仓库（repository）：`deyu-yang/deyu-yang.github.io`
+  - 网站地址：<https://deyu-yang.github.io>
+  - 本地路径：`X:\Claude\Projects\personal-website`
+- **网站内容一律使用英文**；与用户的交流使用中文。
+- 环境：Windows 11，Claude 桌面应用，PowerShell 5.1。
 
-**Read those three before editing anything.** Everything below is Claude-specific or longer-form operational detail that does not belong in the short entry point. Do not restate facts from those files here — link to them.
+## 合作方式（必须遵守）
 
-## Daily dev loop
+1. **先检查、再计划、等确认**：开始新任务前，先检查相关环境和文件，给出分步计划，等用户确认后再执行。
+2. **每一步前先说明**：执行任何一步之前，用通俗的中文说明要做什么、为什么这样做；专业术语给出英文原文，例如"提交（commit）"。
+3. **登录和密码由用户自己完成**：凡是需要登录 GitHub 或输入密码的环节，只告诉用户怎么操作，由用户亲自完成。不要代为输入任何凭据。
+4. **每个阶段提交一次**：每完成一个阶段，做一次 Git 提交（commit），并用中文告诉用户这次提交保存了什么。
+5. **保持本文件更新**：阶段完成或合作方式有变化时，更新下面的"当前进度"等内容。
 
-```bash
-bundle install                                # ruby gems
-bundle exec jekyll serve                      # dev server → http://localhost:4000/al-folio/  (NOTE baseurl)
-bundle exec jekyll build --baseurl /al-folio  # production-style build to _site/
-bash test/integration_distill.sh              # run ONE integration test (any of the seven in test/)
-npm run test:visual:update                    # refresh playwright snapshots after intentional UI change
-bundle exec al-folio upgrade apply --safe     # deterministic codemods (font-weight-* → font-*, remote→local URLs)
-bundle exec al-folio upgrade overrides diff <path>    # then `overrides accept <path>` to acknowledge an override
-```
+## 当前进度
 
-## Optional toolchains
+- [ ] 第一阶段（进行中）：用 al-folio 默认内容让网站在 deyu-yang.github.io 上线
+  - [x] 安装 Git，设置署名；用模板创建仓库；克隆到本地
+  - [x] 修改 `_config.yml`：`url: https://deyu-yang.github.io`，`baseurl` 留空
+  - [ ] 推送后由 GitHub Actions 发布到 `gh-pages` 分支，开启 GitHub Pages，确认网站可以访问
+- [ ] 以后的阶段（计划中）：本地预览（用 Docker）、个人信息与头像、论文列表（publications）、简历（CV）、新闻（news）等
 
-- **Jupyter posts.** `bin/setup-python-deps` installs _only_ `jupyter` and `nbconvert` (via `pip --user --break-system-packages`) for `jekyll-jupyter-notebook`. It does **not** read `requirements.txt`. Missing `jupyter-nbconvert` is warn-and-continue; notebook rendering is skipped.
-- **Everything else Python.** [`requirements.txt`](requirements.txt) is the fuller list and must be installed separately (`python3 -m pip install -r requirements.txt`): `rendercv[full]` for CV rendering, `scholarly` for `bin/update_scholar_citations.py`, plus `nbconvert` and `pyyaml`.
-- **Responsive images.** `imagemagick.enabled: true` needs ImageMagick `convert` on `PATH`.
-- **Manual deploy.** `bin/deploy` is the manual `gh-pages` build + purgecss + force-push path; CI normally deploys. `purgecss` is not a devDependency — install it with `npm install -g purgecss`.
+## 关键技术要点
 
-## Docker serving model (v1-specific)
+- **Git 署名**：`deyu-yang` / `180747901+deyu-yang@users.noreply.github.com`（GitHub 隐私邮箱，不要换成个人邮箱）。
+- **发布流程**：推送（push）到 `main` 分支后，`.github/workflows/deploy.yml`（"Deploy site"）会生成网站并写入 `gh-pages` 分支，GitHub Pages 再从 `gh-pages` 分支发布。整个过程大约需要 3 到 5 分钟。
+- **baseurl 必须留空**：`AGENTS.md` 里说 "baseurl 是 `/al-folio`、清空会出错"，这条只适用于模板仓库本身，**不适用于本网站**。本网站位于域名根目录。
+- **推送前先 `git pull`**：模板里的一些工作流（例如 `update-tocs.yml`）可能会自动往 `main` 提交。如果本地没有同步，推送会被拒绝。
+- **Prettier 等检查失败不影响发布**：Actions 中 Prettier、链接检查等出现红色 ❌ 时，网站仍然可以正常发布，可以之后再处理。
+- **Windows 上找不到 git 时**：Claude 的 PowerShell 窗口不会自动更新 PATH，每条命令前先运行：
+  `$env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')`
+- **本地尚未安装 Ruby / Node.js**：目前无法在本地构建网站，只能靠 GitHub Actions 验证。本地预览计划用 Docker（已安装，但需要先启动 Docker Desktop）。
+- **本文件已在 `_config.yml` 的 `exclude` 列表中**，不会被发布成网页。
 
-`docker compose up -d` bind-mounts the repo to `/srv/jekyll` and runs `bin/entry_point.sh`, which serves with `--force_polling --destination /tmp/_site`. The build output deliberately goes to **container-local `/tmp/_site`, not the bind-mounted `_site`** — writing `_site` back across the host bind mount caused write deadlocks. The container also `inotifywait`s `_config.yml` and restarts Jekyll on change (config edits aren't hot-reloaded by `--watch`). Verify with the `/al-folio` baseurl: `curl -fsS http://127.0.0.1:8080/al-folio/`. `docker-compose-slim.yml` pulls a prebuilt `:slim` image instead of building locally.
+## 技术参考（需要时查阅）
 
-## CI gates and the style contract
+以下文件来自 al-folio 模板，主要写给模板开发者看。其中部分规则（如 baseurl、测试命令）并不适用于个人网站。
 
-`npm run lint:style-contract` (`test/style_contract.js`) is the automated enforcement of the thin-starter boundary and will fail CI if you cross it. Beyond the forbidden paths listed in `AGENTS.md`, it also asserts that `_config.yml` keeps `theme: al_folio_core` and the required plugins, that the `third_party_libraries` SRI pins are present, and that the `al_math` Gemfile pin stays on a released version rather than a git branch.
-
-Other gates:
-
-- `unit-tests.yml` — style contract plus all seven `test/integration_*.sh` scripts (`comments`, `plugin_toggles`, `distill`, `bootstrap_compat`, `upgrade_cli`, `css_minify`, `new_plugins`).
-- `visual-regression.yml` — Playwright on chromium + webkit, diffing the candidate build against a `v0.16.3` baseline worktree served on `:4100` via `BASELINE_URL`.
-- `upgrade-check.yml` — `bundle exec al-folio upgrade audit`.
-- `prettier.yml` — Prettier with `@shopify/prettier-plugin-liquid` and `printWidth: 150`. Run `npm run lint:prettier` before pushing; `npx prettier . --write` fixes.
-- `update-tocs.yml` — regenerates `<!--ts-->…<!--te-->` blocks in changed root and `docs/` Markdown files. If you add or rename a heading, expect a follow-up auto-commit on `main`.
-
-## Gem version pins
-
-`Gemfile` pins every `al-*` gem to an exact released version in `group :al_folio_plugins`, and `_config.yml` lists the same gems under `plugins:`. Read the current pins from the `Gemfile` rather than trusting any version quoted in prose — including here. To test a gem fix against this site, repoint the `Gemfile` at a sibling checkout (`path:`, `git:`, or `branch:`) and `bundle install`; see [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md#working-on-a-gem-alongside-the-starter). Revert the pin before committing.
+- [`AGENTS.md`](AGENTS.md)：模板的结构和修改规则
+- [`docs/CUSTOMIZE.md`](docs/CUSTOMIZE.md)：如何自定义网站内容
+- [`docs/INSTALL.md`](docs/INSTALL.md)：安装、部署与本地预览
+- [`docs/FAQ.md`](docs/FAQ.md)：常见问题
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)：模板与插件（gem）的关系
