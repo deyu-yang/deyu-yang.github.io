@@ -29,7 +29,21 @@
 - 待处理的小问题：
   - "Lighthouse Badger" 工作流运行失败（它只负责生成网站性能评分徽章，不影响发布），以后查明原因或关闭它
   - `_pages/about.md` 的示例文字里写死了 `/al-folio/publications/` 链接，填写个人简介时会一并替换
-- [ ] 以后的阶段（计划中）：本地预览（用 Docker）、个人信息与头像、论文列表（publications）、简历（CV）、新闻（news）等
+- [x] 第二阶段 A（2026-09-24 完成）：用 Docker 本地预览
+- [ ] 第二阶段 B（进行中）：基础个人信息（名字、简介、照片、联系方式、社交链接）
+- [ ] 以后的阶段（计划中）：论文列表（publications）、简历（CV）、新闻（news）、清理示例页面等
+
+## 本地预览（local preview）
+
+在项目根目录下运行以下命令：
+
+- 前提：先打开 **Docker Desktop**，等到显示 "Engine running"。
+- 启动：`docker compose up -d`，然后打开 <http://localhost:8080>。首次生成网站大约需要 40 秒。镜像 `amirpourmand/al-folio:latest`（1.47 GB）已经下载好了。
+- 查看状态和日志：`docker compose ps`、`docker compose logs --tail 30`。日志中出现 `done in xx seconds` 表示网站生成完成。
+- 停止：`docker compose down`。
+- 修改文件后会自动重新生成；Windows 上一般需要等十几秒到一分钟，然后刷新浏览器。**改了 `_config.yml` 以后容器会自动重启**，需要等得更久一些。
+- 预览产生的 `.jekyll-cache/`、`.tweet-cache/` 已被 `.gitignore` 排除，不会被提交。
+- 以后要更新镜像时运行 `docker compose pull`，可以用 `docker image prune` 清理旧镜像（清理前先确认）。
 
 ## 关键技术要点
 
@@ -41,7 +55,7 @@
 - **Prettier 等检查失败不影响发布**：Actions 中 Prettier、链接检查等出现红色 ❌ 时，网站仍然可以正常发布，可以之后再处理。
 - **Windows 上找不到 git 时**：Claude 的 PowerShell 窗口不会自动更新 PATH，每条命令前先运行：
   `$env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')`
-- **本地尚未安装 Ruby / Node.js**：目前无法在本地构建网站，只能靠 GitHub Actions 验证。本地预览计划用 Docker（已安装，但需要先启动 Docker Desktop）。
+- **本地没有安装 Ruby / Node.js**：一律用 Docker 预览（见上文），不要在 Windows 上直接安装 Ruby。
 - **本文件已在 `_config.yml` 的 `exclude` 列表中**，不会被发布成网页。
 
 ## 技术参考（需要时查阅）
