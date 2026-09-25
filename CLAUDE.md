@@ -9,7 +9,7 @@
   - GitHub 仓库（repository）：`deyu-yang/deyu-yang.github.io`
   - 网站地址：<https://deyu-yang.github.io>
   - 本地路径：`X:\Claude\Projects\personal-website`
-- **网站内容以英文为主**；例外：摄影页的照片标题和回忆**中英并列**（用户的中文原文 + Claude 的英文翻译）。与用户的交流使用中文。
+- **网站内容以英文为主**；例外：摄影页的照片标题和回忆**中英并列**（用户的中文原文 + Claude 的英文翻译）；新闻里可以附一句中文问候（如"中秋快乐！"）。网页中的中文都要加 `lang="zh-CN"`。与用户的交流使用中文。
 - 环境：Windows 11，Claude 桌面应用，PowerShell 5.1。
 
 ## 合作方式（必须遵守）
