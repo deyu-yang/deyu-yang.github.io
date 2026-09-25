@@ -61,6 +61,7 @@ Want to learn more about Jekyll? Check out [this tutorial](https://www.taniarasc
 
 <!--ts-->
 
+- [Deyu Yang's personal website](#deyu-yangs-personal-website)
 - [al-folio](#al-folio)
   - [Getting started](#getting-started)
   - [Table Of Contents](#table-of-contents)
