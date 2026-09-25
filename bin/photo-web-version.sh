@@ -19,7 +19,7 @@
 #     -v "<originals folder>:/in:ro" `
 #     -v "${PWD}\assets\img\photography:/out" `
 #     -v "<exiftool folder>:/tools:ro" `
-#     -v "${PWD}\_scripts:/scripts:ro" `
+#     -v "${PWD}\bin:/scripts:ro" `
 #     --entrypoint sh amirpourmand/al-folio:latest /scripts/photo-web-version.sh
 #
 # On macOS use the same command with "\" line breaks and "/" paths.

@@ -28,6 +28,7 @@
   - [x] 推送后由 GitHub Actions 发布到 `gh-pages` 分支，开启 GitHub Pages（Source：`gh-pages` / root），确认网站可以访问
 - 待处理的小问题：
   - "Lighthouse Badger" 工作流运行失败（它只负责生成网站性能评分徽章，不影响发布），以后查明原因或关闭它
+  - PR 上的 "Visual regression checks" **永远会失败**：它要和模板的 `v0.16.3` 版本对比截图，但本仓库是用模板创建的，没有这个版本标记（报错 `fatal: invalid reference: v0.16.3`）。这是给模板开发者用的检查，可以忽略，以后和 Lighthouse Badger 一起关闭
   - `_pages/about_einstein.md` 等示例页面、示例文章和项目仍在仓库里：已从导航栏隐藏，但知道网址仍能打开，右上角搜索（ctrl k）也能搜到。以后"清理示例内容"时一起删除
 - [x] 第二阶段 A（2026-09-24 完成）：用 Docker 本地预览
 - [x] 第二阶段 B（2026-09-24 完成）：基础个人信息
@@ -66,7 +67,7 @@
 - `_pages/photography.md`：页面本身。网格排列缩略图，点击后用 Spotlight 全屏浏览（大图只显示中英标题 · 年份 + 拍摄参数）。有回忆的照片，缩略图下方有可展开的"回忆 · Memory"。
 - `_data/photography.yml`：**照片清单，平时只改这个文件**。按日期从新到旧排列。每条的字段：`file`、`date`、`title_zh` / `title_en`、`alt`（英文替代文字）、拍摄参数、可选的 `memory_zh` / `memory_en`。每条上方的 `#` 中文注释是给用户看的画面描述，不会显示在网站上。
 - `assets/img/photography/`：网页版照片（长边 2000 像素，约 0.4–0.7 MB）。缩略图（480/800/1400 宽的 WebP）由模板自动生成，不用手动做。
-- `_scripts/photo-web-version.sh`：照片处理脚本（以 `_` 开头的文件夹不会被发布）。
+- `bin/photo-web-version.sh`：照片处理脚本（`bin/` 在 `_config.yml` 的 exclude 列表里，不会被发布）。**不要放进 `_scripts/`**：模板的 Integration tests 规定 `_scripts`、`_includes`、`_layouts`、`_sass` 等文件夹名由插件专用，个人网站占用会导致检查失败。
 
 ### 本地文件（不在仓库里）
 
