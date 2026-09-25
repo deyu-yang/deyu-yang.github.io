@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Happy Mid-Autumn Festival! <span lang="zh-CN">中秋快乐！</span> :full_moon: My new [photography](/photography/) page is now live, with a few photos and memories from my years in Hungary.
+Happy Mid-Autumn Festival! <span lang="zh-CN">中秋快乐！</span> :full_moon: My new [photography](/photography/) page is now live, with a few photos and memories from places I've lived and traveled.
