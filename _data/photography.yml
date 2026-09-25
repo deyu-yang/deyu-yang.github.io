@@ -4,16 +4,19 @@
 #   1. Put a web version (2000px long edge, metadata cleaned, copyright added)
 #      in assets/img/photography/
 #   2. Add an entry below. Optional fields:
-#      - title: shown before the year in the lightbox, e.g. "Victoria Harbour · 2025".
-#      - memory_zh / memory_en: a short memory (one or two sentences) in Chinese
-#        and its English translation, shown under the shooting settings in the
-#        lightbox. Longer stories belong in a blog post instead.
+#      - title_zh / title_en: a short title in Chinese and English, shown before
+#        the year in the lightbox, e.g. "窗外的雪 / Snow Outside the Window · 2023".
+#      - memory_zh / memory_en: a memory in Chinese and its English translation,
+#        shown under the shooting settings in the lightbox. Keep it to a few
+#        sentences; longer stories belong in a blog post instead.
 #
 # Lines starting with "#" are notes for the site owner and are not shown on the site.
 
 # 船尾浪花，回望港口、石堡和灯塔，夕阳照在建筑上
 - file: dscf7874.jpg
   date: 2025-07-17
+  title_zh: 船尾浪花
+  title_en: Wake at Sunset
   alt: The wake of a boat on deep blue water, looking back at a harbor entrance with a stone fort, a small lighthouse, and buildings glowing in the evening sun.
   camera: Fujifilm X-S10
   lens: XF16-50mm
@@ -25,6 +28,8 @@
 # 条纹石材的圆顶大教堂，城市和远山，前景草坡
 - file: dscf7784.jpg
   date: 2025-07-16
+  title_zh: 城市之上的大教堂
+  title_en: Cathedral Above the City
   alt: A domed cathedral of striped stone rising above a city of pale buildings, with hills behind and a grassy slope in the foreground.
   camera: Fujifilm X-S10
   lens: XF16-50mm
@@ -36,6 +41,8 @@
 # 老式路灯，俯瞰防波堤、蓝色海面和对岸山丘
 - file: dscf7765.jpg
   date: 2025-07-16
+  title_zh: 海边的路灯
+  title_en: Lamp by the Sea
   alt: An old-fashioned street lamp above coastal shrubs, overlooking a long breakwater, choppy blue sea, and hills across the bay.
   camera: Fujifilm X-S10
   lens: XF16-50mm
@@ -47,6 +54,8 @@
 # 山顶白色教堂（洋葱顶钟楼），俯瞰碧绿湖水，游人散步
 - file: dscf7644.jpg
   date: 2025-07-02
+  title_zh: 湖畔山顶的白色教堂
+  title_en: White Church Above the Lake
   alt: A white church with an onion-domed bell tower on a green hilltop above a turquoise lake, with people strolling along a garden path below.
   camera: Fujifilm X-S10
   lens: XF16-50mm
@@ -55,9 +64,11 @@
   shutter: 1/1600s
   iso: 320
 
-# 草坡上的圆形茅草顶餐厅，橙色长椅，晴空（那天下午在这里吃了午饭）
+# 草坡上的圆形茅草顶餐厅，橙色长椅，晴空
 - file: dscf7641.jpg
   date: 2025-07-02
+  title_zh: 茅草顶餐厅
+  title_en: The Thatched-Roof Restaurant
   alt: A restaurant with a round thatched roof on top of a grassy hill, with orange wooden benches under a clear blue sky.
   camera: Fujifilm X-S10
   lens: XF16-50mm
@@ -65,9 +76,14 @@
   aperture: f/5.6
   shutter: 1/750s
   iso: 160
+  memory_zh: "毕业考试、答辩结束后的第二天，在巴拉顿湖边的一个圆形茅草顶餐厅吃午饭，一向不善饮酒的我，主动点了一大杯扎啤。"
+  memory_en: "The day after my final exams and thesis defense, I had lunch at this round, thatched-roof restaurant by Lake Balaton. Never much of a drinker, I ordered a large draft beer all on my own."
+
 # 我自己的背影，背着包，望着红瓦白墙的裴多菲·山多尔图书馆
 - file: dscf5341.jpg
   date: 2024-04-01
+  title_zh: 图书馆前的背影
+  title_en: Before the Library
   alt: The photographer, seen from behind with a backpack, looking across the street at the Petőfi Sándor Library, a white two-story building with a red tiled roof.
   camera: Fujifilm X-S10
   lens: XC15-45mm
@@ -75,10 +91,14 @@
   aperture: f/5.6
   shutter: 1/1100s
   iso: 160
+  memory_zh: "我很喜欢的一张自己的背影，在米什科尔茨，望着红瓦白墙的裴多菲·山多尔图书馆，那时是我决定不理发的第八个月。"
+  memory_en: "A photo of myself from behind that I really like. In Miskolc, looking at the white-walled, red-roofed Petőfi Sándor Library, eight months after I had decided to stop cutting my hair."
 
 # 黄昏的河面，乌云和晚霞，浮码头，远处亮灯的拱桥
 - file: dscf3015.jpg
   date: 2023-06-24
+  title_zh: 黄昏的河
+  title_en: River at Dusk
   alt: A wide river at dusk under dark clouds and an orange afterglow, with a floating pier in the foreground and a lit arched bridge in the distance.
   camera: Fujifilm X-S10
   lens: XC15-45mm
@@ -86,10 +106,14 @@
   aperture: f/3.5
   shutter: 1/60s
   iso: 500
+  memory_zh: "初到匈牙利两年后第一次准备回国的前一晚，我在傍晚沿着多瑙河走到国会大厦边，那一刻我心中充满着对回到阔别两年的家的憧憬，同时竟也感受到了那么一丝要离开的不舍，到底是对什么的不舍呢？后来我意识到，我的整个19、20岁都留在了那里，我的妈妈和妹妹，没有见到过20岁的我。"
+  memory_en: "The evening before my first trip home, two years after I arrived in Hungary, I walked along the Danube to the Parliament. I was full of longing for the home I had not seen in two years, yet, to my surprise, I also felt a faint reluctance to leave. Reluctance for what? Later I realized that my whole nineteenth and twentieth years had stayed there. My mother and my sister never saw me at twenty."
 
 # 下坡小路，电线杆，远处红顶小城和平原
 - file: dscf2922.jpg
   date: 2023-04-09
+  title_zh: 下坡的路
+  title_en: The Road Downhill
   alt: A quiet road running downhill past power lines toward a red-roofed town and a wide plain under a cloudy sky.
   camera: Fujifilm X-S10
   lens: XC15-45mm
@@ -97,10 +121,14 @@
   aperture: f/5.6
   shutter: 1/120s
   iso: 160
+  memory_zh: "那天我独自在佩奇走了很远很远的路，我想要走到远处山坡顶上的电视塔那里去，但我没有走到，我还要赶上晚上返回布达佩斯的火车，我只好不甘地往回走着，这是我在半路走出树木遮蔽的道路向远处眺望所看到的，那一刻我想着，在未来我还会有机会再次来到这里，走到那个电视塔下吗？"
+  memory_en: "That day I walked a long, long way alone in Pécs, hoping to reach the TV tower on the distant hilltop. I never made it. I had an evening train back to Budapest to catch, so I turned back, reluctantly. Halfway down, the road came out from under the trees, and this is what I saw when I looked into the distance. In that moment I wondered: will I ever come back here and walk all the way to that TV tower?"
 
 # 仰拍黄色建筑阳台上的金属雕塑和钟楼，前景盛开的连翘
 - file: dscf2886.jpg
   date: 2023-04-09
+  title_zh: 连翘与钟楼
+  title_en: Forsythia and Bell Tower
   alt: Looking up past a yellow building with a metal sculpture on its balcony toward a stone bell tower, with a yellow forsythia bush in bloom in the foreground.
   camera: Fujifilm X-S10
   lens: XC15-45mm
@@ -112,6 +140,8 @@
 # 高耸钟楼的大教堂，绿铜屋顶，前方铜像，树枝作前景
 - file: dscf2864.jpg
   date: 2023-04-09
+  title_zh: 树影下的大教堂
+  title_en: Cathedral Behind the Leaves
   alt: A cathedral with tall stone bell towers and a green copper roof, a bronze statue in front, framed by a leafy tree under an overcast sky.
   camera: Fujifilm X-S10
   lens: XC15-45mm
@@ -123,6 +153,8 @@
 # 透过菱形窗格看下雪的老公寓内院，玻璃上映着暖色灯
 - file: dscf2683.jpg
   date: 2023-02-03
+  title_zh: 窗外的雪
+  title_en: Snow Outside the Window
   alt: Snow falling in the inner courtyard of an old apartment building with wrought-iron balconies, seen through a diamond-patterned window grille with a warm lamp reflected in the glass.
   camera: Fujifilm X-S10
   lens: XC15-45mm
@@ -130,3 +162,5 @@
   aperture: f/4.4
   shutter: 1/100s
   iso: 2500
+  memory_zh: "我在布达佩斯最后也住得最久的住处窗外的雪。"
+  memory_en: "Snow outside the window of my last, and longest, home in Budapest."
