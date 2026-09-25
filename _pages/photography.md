@@ -10,6 +10,8 @@ images:
 _styles: >
   .photo-memory summary { cursor: pointer; color: var(--global-text-color-light); }
   .photo-memory p { margin: 0.5rem 0 0; }
+  #spotlight .spl-footer, #spotlight .spl-title, #spotlight .spl-description {
+    color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
 ---
 
 <!-- Photos are listed in _data/photography.yml -->
