@@ -1,3 +1,13 @@
+# Deyu Yang's personal website
+
+Source code for my personal academic homepage: **<https://deyu-yang.github.io>**
+
+I'm a PhD student in the Department of Mechanical and Aerospace Engineering at HKUST. The site is built with [Jekyll](https://jekyllrb.com/) on the [al-folio](https://github.com/alshedivat/al-folio) template and deployed with GitHub Pages.
+
+The rest of this README is the original documentation from the al-folio template, kept here for reference.
+
+---
+
 # al-folio
 
 <div align="center">
