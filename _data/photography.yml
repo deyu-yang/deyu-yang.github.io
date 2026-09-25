@@ -1,0 +1,117 @@
+# Photos shown on /photography/, newest first.
+#
+# To add a photo:
+#   1. Put a web version (2000px long edge, metadata cleaned, copyright added)
+#      in assets/img/photography/
+#   2. Add an entry below. `title` is optional; when set, it is shown before
+#      the year in the lightbox, e.g. "Victoria Harbour · 2025".
+
+- file: dscf7874.jpg
+  date: 2025-07-17
+  alt: The wake of a boat on deep blue water, looking back at a harbor entrance with a stone fort, a small lighthouse, and buildings glowing in the evening sun.
+  camera: Fujifilm X-S10
+  lens: XF16-50mm
+  focal_length: 30mm
+  aperture: f/5.6
+  shutter: 1/750s
+  iso: 320
+
+- file: dscf7784.jpg
+  date: 2025-07-16
+  alt: A domed cathedral of striped stone rising above a city of pale buildings, with hills behind and a grassy slope in the foreground.
+  camera: Fujifilm X-S10
+  lens: XF16-50mm
+  focal_length: 50mm
+  aperture: f/5.6
+  shutter: 1/1500s
+  iso: 320
+
+- file: dscf7765.jpg
+  date: 2025-07-16
+  alt: An old-fashioned street lamp above coastal shrubs, overlooking a long breakwater, choppy blue sea, and hills across the bay.
+  camera: Fujifilm X-S10
+  lens: XF16-50mm
+  focal_length: 50mm
+  aperture: f/5.6
+  shutter: 1/900s
+  iso: 320
+
+- file: dscf7644.jpg
+  date: 2025-07-02
+  alt: A white church with an onion-domed bell tower on a green hilltop above a turquoise lake, with people strolling along a garden path below.
+  camera: Fujifilm X-S10
+  lens: XF16-50mm
+  focal_length: 37mm
+  aperture: f/5.6
+  shutter: 1/1600s
+  iso: 320
+
+- file: dscf7641.jpg
+  date: 2025-07-02
+  alt: A building with a round thatched roof on top of a grassy hill, with orange wooden benches under a clear blue sky.
+  camera: Fujifilm X-S10
+  lens: XF16-50mm
+  focal_length: 21mm
+  aperture: f/5.6
+  shutter: 1/750s
+  iso: 160
+
+- file: dscf5341.jpg
+  date: 2024-04-01
+  alt: A person with a backpack, seen from behind, looking across the street at a white two-story library with a red tiled roof.
+  camera: Fujifilm X-S10
+  lens: XC15-45mm
+  focal_length: 27mm
+  aperture: f/5.6
+  shutter: 1/1100s
+  iso: 160
+
+- file: dscf3015.jpg
+  date: 2023-06-24
+  alt: A wide river at dusk under dark clouds and an orange afterglow, with a floating pier in the foreground and a lit arched bridge in the distance.
+  camera: Fujifilm X-S10
+  lens: XC15-45mm
+  focal_length: 15mm
+  aperture: f/3.5
+  shutter: 1/60s
+  iso: 500
+
+- file: dscf2922.jpg
+  date: 2023-04-09
+  alt: A quiet road running downhill past power lines toward a red-roofed town and a wide plain under a cloudy sky.
+  camera: Fujifilm X-S10
+  lens: XC15-45mm
+  focal_length: 39mm
+  aperture: f/5.6
+  shutter: 1/120s
+  iso: 160
+
+- file: dscf2886.jpg
+  date: 2023-04-09
+  alt: Looking up past a yellow building with a metal sculpture on its balcony toward a stone bell tower, with a yellow forsythia bush in bloom in the foreground.
+  camera: Fujifilm X-S10
+  lens: XC15-45mm
+  focal_length: 35mm
+  aperture: f/5.6
+  shutter: 1/600s
+  iso: 320
+
+- file: dscf2864.jpg
+  date: 2023-04-09
+  alt: A cathedral with tall stone bell towers and a green copper roof, a bronze statue in front, framed by a leafy tree under an overcast sky.
+  camera: Fujifilm X-S10
+  lens: XC15-45mm
+  focal_length: 32mm
+  aperture: f/5.6
+  shutter: 1/680s
+  iso: 320
+
+- file: dscf2683.jpg
+  date: 2023-02-03
+  alt: Snow falling in the inner courtyard of an old apartment building with wrought-iron balconies, seen through a diamond-patterned window grille with a warm lamp reflected in the glass.
+  camera: Fujifilm X-S10
+  lens: XC15-45mm
+  focal_length: 25mm
+  aperture: f/4.4
+  shutter: 1/100s
+  iso: 2500
