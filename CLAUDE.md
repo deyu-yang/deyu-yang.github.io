@@ -27,8 +27,10 @@
   - [x] 修改 `_config.yml`：`url: https://deyu-yang.github.io`，`baseurl` 留空
   - [x] 推送后由 GitHub Actions 发布到 `gh-pages` 分支，开启 GitHub Pages（Source：`gh-pages` / root），确认网站可以访问
 - 待处理的小问题：
-  - "Lighthouse Badger" 工作流运行失败（它只负责生成网站性能评分徽章，不影响发布），以后查明原因或关闭它
-  - PR 上的 "Visual regression checks" **永远会失败**：它要和模板的 `v0.16.3` 版本对比截图，但本仓库是用模板创建的，没有这个版本标记（报错 `fatal: invalid reference: v0.16.3`）。这是给模板开发者用的检查，可以忽略，以后和 Lighthouse Badger 一起关闭
+  - 已停用（2026-09-25，用 `gh workflow disable`，文件保留）：
+    - "Lighthouse Badger"：一直运行失败，它只负责生成网站性能评分徽章，不影响发布
+    - "Visual regression checks"：要和模板的 `v0.16.3` 版本对比截图，但本仓库是用模板创建的，没有这个版本标记（报错 `fatal: invalid reference: v0.16.3`），所以永远会失败
+    - 需要时重新启用：`gh workflow enable "Lighthouse Badger"` / `gh workflow enable "Visual regression checks"`
   - `_pages/about_einstein.md` 等示例页面、示例文章和项目仍在仓库里：已从导航栏隐藏，但知道网址仍能打开，右上角搜索（ctrl k）也能搜到。以后"清理示例内容"时一起删除
 - [x] 第二阶段 A（2026-09-24 完成）：用 Docker 本地预览
 - [x] 第二阶段 B（2026-09-24 完成）：基础个人信息
