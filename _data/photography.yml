@@ -5,7 +5,10 @@
 #      in assets/img/photography/
 #   2. Add an entry below. `title` is optional; when set, it is shown before
 #      the year in the lightbox, e.g. "Victoria Harbour · 2025".
+#
+# Lines starting with "#" are notes for the site owner and are not shown on the site.
 
+# 船尾浪花，回望港口、石堡和灯塔，夕阳照在建筑上
 - file: dscf7874.jpg
   date: 2025-07-17
   alt: The wake of a boat on deep blue water, looking back at a harbor entrance with a stone fort, a small lighthouse, and buildings glowing in the evening sun.
@@ -16,6 +19,7 @@
   shutter: 1/750s
   iso: 320
 
+# 条纹石材的圆顶大教堂，城市和远山，前景草坡
 - file: dscf7784.jpg
   date: 2025-07-16
   alt: A domed cathedral of striped stone rising above a city of pale buildings, with hills behind and a grassy slope in the foreground.
@@ -26,6 +30,7 @@
   shutter: 1/1500s
   iso: 320
 
+# 老式路灯，俯瞰防波堤、蓝色海面和对岸山丘
 - file: dscf7765.jpg
   date: 2025-07-16
   alt: An old-fashioned street lamp above coastal shrubs, overlooking a long breakwater, choppy blue sea, and hills across the bay.
@@ -36,6 +41,7 @@
   shutter: 1/900s
   iso: 320
 
+# 山顶白色教堂（洋葱顶钟楼），俯瞰碧绿湖水，游人散步
 - file: dscf7644.jpg
   date: 2025-07-02
   alt: A white church with an onion-domed bell tower on a green hilltop above a turquoise lake, with people strolling along a garden path below.
@@ -46,9 +52,10 @@
   shutter: 1/1600s
   iso: 320
 
+# 草坡上的圆形茅草顶餐厅，橙色长椅，晴空（那天下午在这里吃了午饭）
 - file: dscf7641.jpg
   date: 2025-07-02
-  alt: A building with a round thatched roof on top of a grassy hill, with orange wooden benches under a clear blue sky.
+  alt: A restaurant with a round thatched roof on top of a grassy hill, with orange wooden benches under a clear blue sky.
   camera: Fujifilm X-S10
   lens: XF16-50mm
   focal_length: 21mm
@@ -56,9 +63,10 @@
   shutter: 1/750s
   iso: 160
 
+# 我自己的背影，背着包，望着红瓦白墙的裴多菲·山多尔图书馆
 - file: dscf5341.jpg
   date: 2024-04-01
-  alt: A person with a backpack, seen from behind, looking across the street at a white two-story library with a red tiled roof.
+  alt: The photographer, seen from behind with a backpack, looking across the street at the Petőfi Sándor Library, a white two-story building with a red tiled roof.
   camera: Fujifilm X-S10
   lens: XC15-45mm
   focal_length: 27mm
@@ -66,6 +74,7 @@
   shutter: 1/1100s
   iso: 160
 
+# 黄昏的河面，乌云和晚霞，浮码头，远处亮灯的拱桥
 - file: dscf3015.jpg
   date: 2023-06-24
   alt: A wide river at dusk under dark clouds and an orange afterglow, with a floating pier in the foreground and a lit arched bridge in the distance.
@@ -76,6 +85,7 @@
   shutter: 1/60s
   iso: 500
 
+# 下坡小路，电线杆，远处红顶小城和平原
 - file: dscf2922.jpg
   date: 2023-04-09
   alt: A quiet road running downhill past power lines toward a red-roofed town and a wide plain under a cloudy sky.
@@ -86,6 +96,7 @@
   shutter: 1/120s
   iso: 160
 
+# 仰拍黄色建筑阳台上的金属雕塑和钟楼，前景盛开的连翘
 - file: dscf2886.jpg
   date: 2023-04-09
   alt: Looking up past a yellow building with a metal sculpture on its balcony toward a stone bell tower, with a yellow forsythia bush in bloom in the foreground.
@@ -96,6 +107,7 @@
   shutter: 1/600s
   iso: 320
 
+# 高耸钟楼的大教堂，绿铜屋顶，前方铜像，树枝作前景
 - file: dscf2864.jpg
   date: 2023-04-09
   alt: A cathedral with tall stone bell towers and a green copper roof, a bronze statue in front, framed by a leafy tree under an overcast sky.
@@ -106,6 +118,7 @@
   shutter: 1/680s
   iso: 320
 
+# 透过菱形窗格看下雪的老公寓内院，玻璃上映着暖色灯
 - file: dscf2683.jpg
   date: 2023-02-03
   alt: Snow falling in the inner courtyard of an old apartment building with wrought-iron balconies, seen through a diamond-patterned window grille with a warm lamp reflected in the glass.
