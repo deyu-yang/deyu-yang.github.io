@@ -3,8 +3,11 @@
 # To add a photo:
 #   1. Put a web version (2000px long edge, metadata cleaned, copyright added)
 #      in assets/img/photography/
-#   2. Add an entry below. `title` is optional; when set, it is shown before
-#      the year in the lightbox, e.g. "Victoria Harbour · 2025".
+#   2. Add an entry below. Optional fields:
+#      - title: shown before the year in the lightbox, e.g. "Victoria Harbour · 2025".
+#      - memory_zh / memory_en: a short memory (one or two sentences) in Chinese
+#        and its English translation, shown under the shooting settings in the
+#        lightbox. Longer stories belong in a blog post instead.
 #
 # Lines starting with "#" are notes for the site owner and are not shown on the site.
 
@@ -62,7 +65,6 @@
   aperture: f/5.6
   shutter: 1/750s
   iso: 160
-
 # 我自己的背影，背着包，望着红瓦白墙的裴多菲·山多尔图书馆
 - file: dscf5341.jpg
   date: 2024-04-01
