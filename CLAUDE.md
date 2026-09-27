@@ -2,6 +2,8 @@
 
 这个文件是写给 Claude Code 的项目说明。每次在本文件夹中启动 Claude Code 时会被自动读取。
 
+在 Windows 上，上一级的 `X:\Claude\CLAUDE.md`（工作区总说明：用户背景、通用合作方式、文件夹约定）也会被读取。下面的合作方式与它一致，保留在这里，是为了在 Mac 等其他电脑上也能看到。
+
 ## 项目背景
 
 - 用户：香港科技大学（HKUST）机械工程专业博士新生，非计算机专业背景。有基础电脑知识，但不熟悉 Git、命令行（command line）和网页开发（web development）。
@@ -73,8 +75,9 @@
 
 ### 本地文件（不在仓库里）
 
-- 原片：`X:\Claude\Photos-for-projects\Photos-for-personal-webpage\gallery\`（头像原图在同级的 `profile\`，不放进摄影页）
-- **私人回忆本**：`X:\Claude\Photos-for-projects\Photos-for-personal-webpage\回忆.md`。每张照片分"完整回忆"（只给自己看，**绝不上传**）和"网站版"（用户愿意公开的部分）。
+- 素材根目录：`X:\Claude\Assets\personal-website\`（2026-09-27 从旧的 `X:\Claude\Photos-for-projects\Photos-for-personal-webpage\` 搬过来）
+- 原片：`...\gallery\`（头像原图在同级的 `profile\`，不放进摄影页）。其中 `DSCF1351/1353/1358/1361` 是 2026-09-27 从外层归进来的，**还没有上摄影页**；处理脚本会处理 `gallery\` 里所有还没做过网页版的照片，所以下次运行时也会处理这 4 张。
+- **私人回忆本**：`...\notes\回忆.md`。每张照片分"完整回忆"（只给自己看，**绝不上传**）和"网站版"（用户愿意公开的部分）。
 - ExifTool：`X:\Claude\Tools\exiftool-13.59\`（从官方 GitHub 仓库下载的源码版，在 Docker 里用 Perl 运行；exiftool.org 在用户网络下连不上）
 - 在 Mac 上这些路径都不存在：回忆可以请用户直接在对话里发过来；原片需要用户在 Mac 上另建同样结构的文件夹。
 
