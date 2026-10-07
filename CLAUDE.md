@@ -2,17 +2,16 @@
 
 这个文件是写给 Claude Code 的项目说明。每次在本文件夹中启动 Claude Code 时会被自动读取。
 
-在 Windows 上，上一级的 `X:\Claude\CLAUDE.md`（工作区总说明：用户背景、通用合作方式、文件夹约定）也会被读取。下面的合作方式与它一致，保留在这里，是为了在 Mac 等其他电脑上也能看到。
+**⚠️ 本仓库是公开的**：不要在本文件或其他仓库文件里写用户的个人背景、社交账号、本机文件夹结构和文件名等信息。这些只写在本机的说明文件里（Windows：`X:\Claude\CLAUDE.md`；Mac：`~/.claude/CLAUDE.md`），Claude 启动时会一并读取。下面的合作方式在本机文件里也有，保留在这里是为了在任何电脑上都能看到。
 
 ## 项目背景
 
-- 用户：香港科技大学（HKUST）机械工程专业博士新生，非计算机专业背景。有基础电脑知识，但不熟悉 Git、命令行（command line）和网页开发（web development）。
 - 项目：基于 [al-folio](https://github.com/alshedivat/al-folio) 模板的个人学术主页。
   - GitHub 仓库（repository）：`deyu-yang/deyu-yang.github.io`
   - 网站地址：<https://deyu-yang.github.io>
-  - 本地路径：`X:\Claude\Projects\personal-website`
+- **网站定位**（2026-10-07 起）：个人的记录与记忆，主要是照片背后的故事，**不是展示或社交**。写网站上的文字时保持安静、克制，不做自我推销；首页简介不介绍身份（身份只在副标题里）。
 - **网站内容以英文为主**；例外：摄影页的照片标题和回忆**中英并列**（用户的中文原文 + Claude 的英文翻译）；新闻里可以附一句中文问候（如"中秋快乐！"）。网页中的中文都要加 `lang="zh-CN"`。与用户的交流使用中文。
-- 环境：Windows 11，Claude 桌面应用，PowerShell 5.1。
+- 环境：主要在 Windows（Claude 桌面应用，PowerShell 5.1），有时在 Mac 上。
 
 ## 合作方式（必须遵守）
 
@@ -36,17 +35,23 @@
   - `_pages/about_einstein.md` 等示例页面、示例文章和项目仍在仓库里：已从导航栏隐藏，但知道网址仍能打开，右上角搜索（ctrl k）也能搜到。以后"清理示例内容"时一起删除
 - [x] 第二阶段 A（2026-09-24 完成）：用 Docker 本地预览
 - [x] 第二阶段 B（2026-09-24 完成）：基础个人信息
-  - 名字 Deyu Yang；副标题为 MAE 系 PhD 学生（纯文字，还没加系网站链接）；英文简介；照片
-  - 首页隐藏了示例论文、博客和社交图标（`about.md` 中的 `selected_papers` / `latest_posts` / `social` 都设为 false）；新闻只保留一条上线公告
+  - 首页：名字、副标题（纯文字，还没加链接）、英文简介、头像照片
+  - 首页隐藏了示例论文、博客和社交图标（`about.md` 中的 `selected_papers` / `latest_posts` / `social` 都设为 false）
   - `_data/socials.yml` 所有条目都已注释掉（用户暂不公开邮箱或其他链接）
-  - 还没做：导师 / 研究方向、邮箱与社交链接、浏览器标签图标 favicon（目前是 ⚛️）
 - [x] 第三阶段（2026-09-25 完成，分支 `feature/nav-and-photography`，第一次用 PR 合并）：精简导航栏 + 摄影页
   - 导航栏只保留 about 和 photography；其他 8 个示例页面设为 `nav: false`（文件保留，改回 `true` 即可恢复）
   - `_config.yml` 的 `scholar:` 已改为 `last_name: [Yang]`、`first_name: [Deyu, D.]`
-  - README 顶部加了个人介绍，模板原文保留在下方
   - 新增摄影页 `/photography/`：11 张照片、中英标题、5 条中英回忆（详见下面"摄影页"一节）
+- [x] 2026-09-27：移除仓库里只在仓库中可见的个人信息（README 个人简介、本文件里的个人背景、社交账号名、本机路径）。README 顶部现在只有一句中性说明，模板原文保留在下方。Git 历史里的旧版本按用户决定不改写
+- [x] 2026-10-07：首页简介重写（与上一条同一个 PR）
+  - 简介以"刻在石头上的字"为意象（灵感来自《三体》），写给偶然来到这里的读者；副标题保留
+  - 简介用 `<div class="stone-note" markdown="1">` 包起来，样式写在 `about.md` 开头的 `<style>` 里：衬线字体、左侧细竖线、字号略小、段距收紧，和副标题区分开。首页的 about 模板不支持 `_styles`，所以样式直接写在内容里
+  - 简介里不放链接
+  - `_config.yml` 的搜索摘要 `description` 改为 "A notebook of work, life, and memories, kept by Deyu Yang, a PhD student at HKUST."
+  - 简介的措辞是和用户反复推敲后定下的，**以后不要主动改动**
 - [ ] 以后的阶段（计划中）：
-  - 论文列表（publications）、简历（CV）、新闻（news）、清理示例内容
+  - 论文列表（publications）、简历（CV）、新闻（news）、联系方式、清理示例内容
+  - 访客地图（例如 ClustrMaps）：需要用户自己注册账号；要考虑隐私（访客 IP 会发给第三方）、Cookie 同意弹窗，以及网站安全策略（CSP）对外部脚本的拦截
   - **照片故事长文（D）**：为较长的回忆写博客文章（一次旅行一篇）。需要先清理示例文章、重新启用 blog 栏目；`_data/photography.yml` 可加一项指向对应文章，让照片和故事互相链接；回忆本里的"完整回忆"可作为草稿
   - 浏览器标签图标 favicon（用户暂时不换，仍是 ⚛️）
 
@@ -75,19 +80,21 @@
 
 ### 本地文件（不在仓库里）
 
-- 素材根目录：`X:\Claude\Assets\personal-website\`（2026-09-27 从旧的 `X:\Claude\Photos-for-projects\Photos-for-personal-webpage\` 搬过来）
-- 原片：`...\gallery\`，**只放要上摄影页的照片**。处理脚本会处理这里所有还没做过网页版的照片。头像原图在同级的 `profile\`，不放进摄影页。
-- 暂不公开的照片：`...\unpublished\`（目前有 DSCF1351/1353/1358/1361）。脚本不会读这个文件夹；以后要公开时，再把照片挪回 `gallery\`。
-- **私人回忆本**：`...\notes\回忆.md`。每张照片分"完整回忆"（只给自己看，**绝不上传**）和"网站版"（用户愿意公开的部分）。
-- ExifTool：`X:\Claude\Tools\exiftool-13.59\`（从官方 GitHub 仓库下载的源码版，在 Docker 里用 Perl 运行；exiftool.org 在用户网络下连不上）
-- 在 Mac 上这些路径都不存在：回忆可以请用户直接在对话里发过来；原片需要用户在 Mac 上另建同样结构的文件夹。
+原片、私人回忆本和 ExifTool 都放在仓库外面，**具体位置见本机的说明文件**（Windows：`X:\Claude\CLAUDE.md`）。素材文件夹的约定：
+
+- `gallery/`：**只放要上摄影页的原片**。处理脚本会处理这里所有还没做过网页版的照片。
+- `profile/`：头像原图，不放进摄影页。
+- `unpublished/`：暂不公开的照片。脚本不会读这个文件夹；以后要公开时，再把照片挪回 `gallery/`。
+- `notes/回忆.md`：**私人回忆本**。每张照片分"完整回忆"（只给自己看，**绝不上传**）和"网站版"（用户愿意公开的部分）。
+- ExifTool：从官方 GitHub 仓库（github.com/exiftool/exiftool）下载的源码版，在 Docker 里用 Perl 运行（exiftool.org 在用户网络下连不上）。
+- 在没有这些文件夹的电脑上：回忆可以请用户直接在对话里发过来；原片需要用户另建同样结构的文件夹。
 
 ### 添加新照片的流程
 
 1. 用户把导出的 JPEG（或 HEIC）放进 `gallery\`。RAW 文件要先在 Lightroom / 照片 App 里导出成 JPEG。
 2. 运行处理脚本（用法写在脚本开头）。它会跳过已处理的照片，最后检查有没有残留的序列号、GPS 和厂商私有数据。
    - **全部元数据清除后，只写回**：相机、镜头、焦距、光圈、快门、ISO、拍摄时间、色彩空间，以及统一的作者 `Deyu Yang` 和版权 `© <拍摄年份> Deyu Yang. All rights reserved.`（EXIF、IPTC、XMP 三种标准都写）。
-   - **不写社交账号**。相机里旧的版权设置（`@deyu1729`、`deyurainsnowindfrost`）不要沿用。
+   - **不写社交账号**。相机里旧的作者 / 版权设置（社交账号名）不要沿用。
 3. Claude 看照片，起草英文替代文字、中英标题和中文注释，**请用户确认**。
 4. 在 `_data/photography.yml` 里按日期加一条 → 本地预览 → 提交。
 
