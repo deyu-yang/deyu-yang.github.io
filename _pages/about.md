@@ -23,6 +23,31 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi there, and welcome! I'm Deyu, a new PhD student in the Department of Mechanical and Aerospace Engineering at HKUST.
+<style>
+  .stone-note {
+    margin-top: 1.25rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--global-text-color-light);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .stone-note p { margin-bottom: 0.6rem; }
+  .stone-note p:last-child { margin-bottom: 0; }
+</style>
 
-This is my little corner of the internet, where I'll be recording and sharing bits of my work and life along the way. Thanks for stopping by!
+<div class="stone-note" markdown="1">
+
+Whoever you are, you have found a stone.
+
+For some years I thought, believed, felt, and wandered, mostly alone. No one else was there to remember it with me. Memory is soft. It keeps nothing for long, and it will go when I go.
+
+_So I carve._
+
+Not to be seen, only to leave something that will still say, after me: this was real. Someone was here, and lived, and thought these things.
+
+So far, I have carved some stories behind a few of my photographs. A camera keeps the light of a moment, but not what the moment meant. That part I leave beside each picture.
+
+If you are reading this, perhaps that is a small kind of fate. You're welcome to stay a while.
+
+</div>

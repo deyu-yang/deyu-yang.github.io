@@ -9,6 +9,7 @@
 - 项目：基于 [al-folio](https://github.com/alshedivat/al-folio) 模板的个人学术主页。
   - GitHub 仓库（repository）：`deyu-yang/deyu-yang.github.io`
   - 网站地址：<https://deyu-yang.github.io>
+- **网站定位**（2026-10-07 起）：个人的记录与记忆，主要是照片背后的故事，**不是展示或社交**。写网站上的文字时保持安静、克制，不做自我推销；首页简介不介绍身份（身份只在副标题里）。
 - **网站内容以英文为主**；例外：摄影页的照片标题和回忆**中英并列**（用户的中文原文 + Claude 的英文翻译）；新闻里可以附一句中文问候（如"中秋快乐！"）。网页中的中文都要加 `lang="zh-CN"`。与用户的交流使用中文。
 - 环境：主要在 Windows（Claude 桌面应用，PowerShell 5.1），有时在 Mac 上。
 
@@ -42,7 +43,12 @@
   - `_config.yml` 的 `scholar:` 已改为 `last_name: [Yang]`、`first_name: [Deyu, D.]`
   - 新增摄影页 `/photography/`：11 张照片、中英标题、5 条中英回忆（详见下面"摄影页"一节）
 - [x] 2026-09-27：移除仓库里只在仓库中可见的个人信息（README 个人简介、本文件里的个人背景、社交账号名、本机路径）。README 顶部现在只有一句中性说明，模板原文保留在下方。Git 历史里的旧版本按用户决定不改写
-- [ ] 进行中：修改首页简介（`_pages/about.md`）
+- [x] 2026-10-07：首页简介重写（与上一条同一个 PR）
+  - 简介以"刻在石头上的字"为意象（灵感来自《三体》），写给偶然来到这里的读者；副标题保留
+  - 简介用 `<div class="stone-note" markdown="1">` 包起来，样式写在 `about.md` 开头的 `<style>` 里：衬线字体、左侧细竖线、字号略小、段距收紧，和副标题区分开。首页的 about 模板不支持 `_styles`，所以样式直接写在内容里
+  - 简介里不放链接
+  - `_config.yml` 的搜索摘要 `description` 改为 "A notebook of work, life, and memories, kept by Deyu Yang, a PhD student at HKUST."
+  - 简介的措辞是和用户反复推敲后定下的，**以后不要主动改动**
 - [ ] 以后的阶段（计划中）：
   - 论文列表（publications）、简历（CV）、新闻（news）、联系方式、清理示例内容
   - 访客地图（例如 ClustrMaps）：需要用户自己注册账号；要考虑隐私（访客 IP 会发给第三方）、Cookie 同意弹窗，以及网站安全策略（CSP）对外部脚本的拦截
